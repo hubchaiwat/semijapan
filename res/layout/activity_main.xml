@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/intro"
+        android:textSize="@dimen/text_size" />
+
+    <Button
+        android:id="@+id/btn_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_ike"
+        android:layout_below="@+id/btn_ike"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/sushi_small"
+        android:height="@dimen/height"
+        android:onClick="sushi_click"
+        android:width="@dimen/width" />
+
+    <Button
+        android:id="@+id/btn_sword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_food"
+        android:layout_alignBottom="@+id/btn_food"
+        android:layout_alignLeft="@+id/btn_ocha"
+        android:background="@drawable/sword_small"
+        android:height="@dimen/height"
+        android:onClick="sword_click"
+        android:width="@dimen/width" />
+
+    <Button
+        android:id="@+id/btn_ocha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/intro"
+        android:layout_below="@+id/intro"
+        android:layout_marginRight="42dp"
+        android:background="@drawable/ocha_small"
+        android:height="@dimen/height"
+        android:minHeight="48dip"
+        android:onClick="ocha_click"
+        android:width="@dimen/width" />
+
+    <Button
+        android:id="@+id/btn_ike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_ocha"
+        android:layout_alignBottom="@+id/btn_ocha"
+        android:layout_marginRight="25dp"
+        android:layout_toLeftOf="@+id/btn_ocha"
+        android:background="@drawable/ike_small"
+        android:height="@dimen/height"
+        android:onClick="ike_click"
+        android:width="@dimen/width" />
+
+    <TextView
+        android:id="@+id/intro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_food"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/intro2"
+        android:textColor="@color/color_grey"
+        android:textSize="@dimen/text_size2" />
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intro2"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/btn_food"
+        android:background="@drawable/icon_pause"
+        android:height="@dimen/height_play"
+        android:minHeight="@dimen/height_play"
+        android:minWidth="@dimen/width_play"
+        android:onClick="play_click"
+        android:width="@dimen/width_play" />
+
+    <ImageView
+        android:id="@+id/gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/intro"
+        android:layout_alignTop="@+id/intro"
+        android:onClick="close_picture" />
+
+</RelativeLayout>
